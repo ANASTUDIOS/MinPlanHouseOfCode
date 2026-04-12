@@ -6,7 +6,7 @@
 
 
   <!-- Change the title to your app name and your name -->
-  <title>EcoTracker | Jane Doe — Example Project</title>
+  <title>MinPlan | Minimalist College Planner: AraOluwa Adetunji - </title>
 
 
   <!-- Required: keep this line so navigation arrows are styled -->
@@ -14,6 +14,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
 
   <style>
@@ -30,14 +32,15 @@
 
 
 :root {
-    --dark: #141414;
-    --light: #E2EFF4;
-    --accent-green: #91D37E;
-    --accent-teal: #3A7D96;
+    --dark: #131313;
+    --light: #e4e4e4;
+    --border-color:#3f3f3f;
+    --accent-green: #e4e4e4;
+    --accent-teal: #1b1d25;
     --accent-blue: #4B9BB9;
     --accent-purple: #9B7EC9;
     --accent-coral: #FF6B9D;
-    --light-bg: #F5F7FA;
+    --light-bg: #fefae0;
     --light-text: #1a1a2e;
     --light-card: #FFFFFF;
 }
@@ -54,7 +57,7 @@ html {
 
 
 body {
-    font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+    font-family: 'Familjen Grotesk', system-ui, -apple-system, sans-serif;
     background: var(--dark);
     color: var(--light);
     min-height: 100vh;
@@ -62,10 +65,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
-    perspective: 1200px;
+    perspective: 700px;
     overflow-x: hidden;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 4s ease, color 4s ease;
     position: relative;
 }
 
@@ -73,6 +75,7 @@ body {
 body.light-mode {
     background: linear-gradient(135deg, #F5F7FA 0%, #E8F0F8 100%);
     color: var(--light-text);
+    transition: background-color 4s ease, color 4s ease;
 }
 
 
@@ -129,7 +132,7 @@ body::after {
 
 .theme-toggle:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(145, 211, 126, 0.3);
+    box-shadow: 0 4px 15px var(--border-color);
 }
 
 
@@ -155,13 +158,12 @@ body.light-mode .theme-toggle {
     z-index: 10;
 }
 
-
 .hero p {
     position: fixed;
     top: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    font-family: 'Averia Serif Libre', serif;
+    font-family: 'Bricolage Grotesque', serif;
     font-size: 1.2rem;
     color: var(--light);
     text-align: center;
@@ -178,18 +180,19 @@ body.light-mode .hero p {
 
 
 .hero h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 23rem;
+    font-family: 'Familjen Grotesk', sans-serif;
+    font-size: 11rem;
     font-weight: 900;
     color: var(--light);
     text-align: center;
     line-height: 0.9;
     letter-spacing: -0.02em;
     transform-style: preserve-3d;
-    transition: transform 0.05s linear;
+    transition: transform 0.8s linear;
     cursor: pointer;
     position: relative;
     margin: 0;
+    padding: 50px;
 }
 
 
@@ -199,7 +202,7 @@ body.light-mode .hero h1 {
 
 
 .hero h2 {
-    font-family: 'Averia Serif Libre', serif;
+    font-family: 'Bricolage Grotesque', serif;
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--accent-green);
@@ -248,8 +251,8 @@ body.light-mode .back-to-showcase:hover {
     margin: 2rem auto;
     padding: 2.5rem;
     border-radius: 12px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 2px solid var(--accent-green);
+    background: rgba(61, 61, 61, 0.08);
+    border: 2px solid var(--border-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -269,19 +272,19 @@ body.light-mode .back-to-showcase:hover {
 
 .hero2:hover {
     transform: translateY(-10px);
-    border-color: rgba(145, 211, 126, 0.5);
-    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--border-color);
+    background: rgba(61, 61, 61, 0.08);
 }
 
 
 body.light-mode .hero2 {
     background: rgba(255, 255, 255, 0.7);
-    border: 2px solid rgba(58, 125, 150, 0.3);
+    border: 2px solid rgba(22, 22, 22, 0.3);
 }
 
 
 .hero2 p {
-    font-family: 'Averia Serif Libre', serif;
+    font-family: 'Familjen Grotesk', serif;
     font-size: 1.1rem;
     color: var(--light);
     margin: 1rem 0;
@@ -314,7 +317,9 @@ body.light-mode .hero2 p:first-child {
     font-weight: 900;
     color: var(--accent-green);
     margin: 1rem 0;
+    font-family: 'Bricolage Grotesque', serif;
 }
+
 
 
 body.light-mode .hero2 h2 {
@@ -364,33 +369,32 @@ body.light-mode .hero2 h2 {
 
 .tech-item {
     padding: 1rem;
-    background: rgba(145, 211, 126, 0.15);
-    border: 2px solid var(--accent-green);
+    background: #9d8ce1;
     border-radius: 10px;
     text-align: center;
     font-weight: 700;
-    color: var(--accent-green);
+    color: var(--dark);
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 
 .tech-item:hover {
-    background: rgba(145, 211, 126, 0.3);
-    transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(145, 211, 126, 0.2);
+    background:#9d8ce1;
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px var(--border-color);
 }
 
 
 body.light-mode .tech-item {
     background: rgba(58, 125, 150, 0.15);
-    border-color: var(--accent-teal);
     color: var(--accent-teal);
 }
 
 
 body.light-mode .tech-item:hover {
-    background: rgba(58, 125, 150, 0.3);
+    background: rgba(58, 125, 150, 0.15);
+    box-shadow: 0 8px 25px rgb(203, 203, 203);
 }
 
 
@@ -406,7 +410,7 @@ body.light-mode .tech-item:hover {
     border-radius: 12px;
     overflow: hidden;
     aspect-ratio: 16 / 9;
-    border: 2px solid var(--accent-green);
+    border: 2px solid var(--border-color);
     transition: all 0.3s ease;
     position: relative;
     z-index: 10;
@@ -474,7 +478,7 @@ footer {
     width: 100%;
     padding: 3rem 2rem;
     text-align: center;
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--dark);
     margin-top: 4rem;
     position: relative;
     z-index: 10;
@@ -675,8 +679,11 @@ body.light-mode footer a {
 
   <!-- Hero section -->
   <div class="hero">
-    <p>  <a href="../../" class="back-to-showcase">&larr; Back to Showcase</a> <br>A project by AraOluwa Adetunji</p>
-    <h1 class="tilt-element">Min Plan</h1>
+    <p>  
+        <a href="../../" class="back-to-showcase">&larr; Back to Showcase</a> 
+        <h3>Created by AraOluwa Adetunji<h3>
+    </p>
+    <h1 class="tilt-element">MinPlan</h1>
     <h2>CONGRESSIONAL APP CHALLENGE · RI-01 · 2025</h2>
   </div>
 
@@ -687,36 +694,28 @@ body.light-mode footer a {
 
   <!-- About me section -->
   <div class="hero2">
-    <p>About Me</p>
+    <p>😎 About Me</p>
     <h2>AraOluwa Adetunji</h2>
-    <p>I'm a junior at Lincoln High School. I've been coding since I was 13 and I'm passionate about environmental science and technology. When I'm not coding, you can find me volunteering at the local community garden. This is my second year participating in the Congressional App Challenge, and I wanted to build something that could make a real difference in how schools think about sustainability.</p>
-  </div>
+    <p>Hi there! My name is AraOluwa Adetunji and I am a Junior at East Greenwich High School in East Greenwich Rhode Island. Although I come from the smallest state, I have a big vision for the future. The rise of Artificial intelligence and new AI systems has created a mix of both fear and excitement in what the future could hold. In my lightning talk Humanity in The Era of Superintelligence, I hope to address some of these issues and provide my own insight about where humanity is headed. I started coding when I was 11 years old, due to inspiration from my older brother, in order to make games, but quickly found my own passion for app development as I started to realize the power of harnessing technology for social good. In the future, I want to continue to use this ability to make personalized apps and programs to solve human problems and add customized layouts and feel that AI just can not quite replicate. When I am not coding you can find me at my local church youth group, playing my cello, watching movies, or racing 300 meter hurdles during the track season. This is my very first year doing the Congressional App Challenge.</p>
+</div>
 
 
   <!-- What is Mini Plan section -->
   <div class="hero2">
-    <p>The App</p>
-    <h2>What is Mini Plan</h2>
-    <p>Mini Plan is a comprehensive planning and task management application designed to help students and professionals organize their schedules, manage their workload, and track their progress toward their goals. With an intuitive interface and powerful features, Mini Plan makes it easy to stay on top of your responsibilities.</p>
-  </div>
-
-
-  <!-- Stats section -->
-  <div class="hero2">
-    <p>Impact</p>
-    <h2>Stats & Results</h2>
-    <p>Built with React Native and Firebase, Mini Plan has been piloted with over 100 students, resulting in improved productivity and 35% better task completion rates. Users report increased organization and reduced stress about managing their schedules.</p>
-  </div>
-
+    <p> 📅 The App </p>
+    <h2>MinPlan</h2>
+    <p>MinPlan is a minimalist college planner application to help students better keep track of important documents, scores, events, and programs so that they are better suited to apply to college when the time comes. It uses an iterative process, where students are able to enter the app and quickly add or edit key areas of interest so that keeping track of important college items is not a hassle and becomes just a built-in part of the day, week or month. To keep everything clean and organized, the app primarily uses a system of drop down menus, where the user is able to add items of interest, like the descriptions of awards, community service events, or a link to a scholarship they do not want to forget in a simple and easy to use manner. The app also allows people to track events and upcoming tasks that they need to complete. In the future, I want to add a notification system to make the process even more seamless for tasks that need to get done. Many many more updates and Ideas coming soon. </p>
+</div>
 
   <!-- Built with section -->
-  <div class="built-with">
-    <h3>🛠 Built With</h3>
+  <div class="hero2">
+    <p>🔨 Tools</p>
+    <h2>Built With</h2>
     <div class="tech-grid">
-      <div class="tech-item">React Native</div>
-      <div class="tech-item">Firebase</div>
+      <div class="tech-item">Expo w/ React Native</div>
+      <div class="tech-item">Appwrite Backend Service</div>
       <div class="tech-item">Node.js</div>
-      <div class="tech-item">Chart.js</div>
+      <div class="tech-item">Node.js</div>
     </div>
   </div>
 
@@ -727,10 +726,24 @@ body.light-mode footer a {
  allowfullscreen></iframe>
   </div>
 
+    <!-- Stats section -->
+  <div class="hero2">
+    <p>🖼️ Screenshots</p>
+    <div class="hero2">
+        <img></img>
+    </div>
+    <div class="hero2">
+        <img></img>
+    </div>
+    <div class="hero2">
+        <img></img>
+    </div>
+</div>
 
   <footer>
     <p>Congressional App Challenge &bull; <a href="../../">Back to Showcase</a></p>
   </footer>
+
   <!-- Required: keep this line so arrow key navigation works -->
   <script src="../../assets/js/nav.js" data-root="../../"></script>
  
@@ -759,7 +772,7 @@ body.light-mode footer a {
 
     // Tilt effect
     const h1 = document.querySelector('.tilt-element');
-    const maxRotation = 45;
+    const maxRotation = 30;
    
     document.addEventListener('mousemove', (e) => {
       const rect = h1.getBoundingClientRect();
@@ -794,9 +807,9 @@ body.light-mode footer a {
 
 
     const stickerColors = [
-      { bg: '#91D37E', text: '#141414', border: '#91D37E' },
-      { bg: '#3A7D96', text: '#E2EFF4', border: '#3A7D96' },
-      { bg: '#4B9BB9', text: '#E2EFF4', border: '#4B9BB9' }
+      { bg: '#91D37E', text: '#777777', border: '#91D37E' },
+      { bg: '#3A7D96', text: '#777777', border: '#3A7D96' },
+      { bg: '#4B9BB9', text: '#777777', border: '#4B9BB9' }
     ];
 
 
